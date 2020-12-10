@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.bottle {
+  width: 200px;
+  height: 600px;
+  background-color: #ddd;
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(35% 0, 65% 0, 75% 15%, 100% 30%, 100% 100%, 0 100%, 0 30%, 25% 15%);
+}
+
+.wave {
+  width: 600px;
+  height: 350px;
+  top: 50%;
+  position: absolute;
+  background-color: #0099ff;
+  transform: translateX(-35%) rotate(0);
+  animation: waving 2.5s linear infinite;
+}
+
+@keyframes waving {
+  0% {transform: translateX(-35%) rotate(0);}
+  25% {transform: translateX(-35%) rotate(4deg);}
+  50% {transform: translateX(-35%) rotate(0);}
+  75% {transform: translateX(-35%) rotate(-4deg);}
+  100% {transform: translateX(-35%) rotate(0deg);}
+}
+
